@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Sharma - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6; /* Light gray background */
+            color: #444; /* Dark gray text */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333; /* Dark header background */
+            color: #fff; /* White header text */
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #555 3px solid; /* Slightly lighter border */
+        }
+        header a {
+            color: #fff; /* White links */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: right;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header nav ul li a:hover {
+            color: #ccc; /* Lighter link color on hover */
+        }
+        .showcase {
+            background: #4CAF50; /* Vibrant green showcase background */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff; /* White background */
+            margin-top: -20px; /* Overlap the showcase section */
+        }
+        .main h2 {
+            color: #333; /* Dark heading color */
+            margin-bottom: 10px;
+        }
+        .main p {
+            line-height: 1.6em;
+        }
+        footer {
+            background: #333; /* Dark footer background */
+            color: #fff; /* White footer text */
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+        /* Additional styling for specific sections */
+        #about, #skills, #experience, #education, #contact {
+            background-color: #f9f9f9; /* Light gray background for sections */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        #about h2, #skills h2, #experience h2, #education h2, #contact h2 {
+            color: #555; /* Dark gray heading color */
+        }
+        #skills ul, #education ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #skills li, #education li {
+            background: #eaeaea; /* Light gray background for list items */
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #contact a {
+            color: #4CAF50; /* Vibrant green for links */
+            text-decoration: none;
+        }
+        #contact a:hover {
+            text-decoration: underline;
+        }
+		
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 20px;
+			background-color: #f9f9f9; /* Light gray background */
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			margin-top: 20px;
+		}
+
+		/* Style the tab buttons */
+		.tab button {
+			background-color: #333; /* Dark background for tabs */
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			border-radius: 8px 8px 0 0;
+			transition: background-color 0.3s;
+		}
+
+		/* Change background color of button on hover */
+		.tab button:hover {
+			background-color: #555; /* Slightly lighter background on hover */
+		}
+
+		/* Style the tab content */
+		.tabcontent ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		.tabcontent ul li {
+			background: #eaeaea; /* Light gray background for list items */
+			margin: 5px 0;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		
+		.bubbles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bubbles span {
+    background-color: #4CAF50; /* Green bubble background */
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Rahul Sharma</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div class="container content">
+            <h1>Senior Software Developer</h1>
+            <p>Specializing in C# .NET and Angular</p>
+        </div>
+    </section>
+
+    <div class="main container">
+        <section id="about">
+            <h2>Professional Summary</h2>
+            <p>Experienced Senior Software Developer specializing in C# .NET and Angular focusing on delivering scalable web applications using cloud-based architectures such as Azure. Adept at designing and managing enterprise-level databases, stored procedures, and writing optimized SQL queries. Proficient in front-end programming with Angular, JavaScript, HTML5, and CSS3 to develop engaging and visually appealing user interfaces. Well-versed in delivering projects using Agile and waterfall methodologies while deploying codes using CI/CD pipelines and DevOps processes. Possess a strong ability to analyze complex challenges and create innovative solutions that drive business success.</p>
+        </section>
+
+		<section id="skills">
+    <h2>Skills</h2>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'programming')" id="defaultOpen">Programming</button>
+        <button class="tablinks" onclick="openTab(event, 'technology')">Technology</button>
+        <button class="tablinks" onclick="openTab(event, 'software')">Software</button>
+    </div>
+
+    <div id="programming" class="tabcontent">
+        <div class="bubbles">
+            <span>C#</span>
+            <span>.NET 6.0</span>
+            <span>.NET Core (3.1, 2.2)</span>
+            <span>Angular 15</span>
+            <span>Angular 8</span>
+            <span>JavaScript</span>
+            <span>SQL</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+        </div>
+    </div>
+
+    <div id="technology" class="tabcontent">
+        <div class="bubbles">
+            <span>GraphQL</span>
+            <span>Azure Functions</span>
+            <span>Azure blob storage</span>
+            <span>AWS Lambda functions</span>
+            <span>AWS SQS</span>
+            <span>Dapper</span>
+            <span>Entity Framework</span>
+            <span>Xunit</span>
+            <span>Swagger</span>
+            <span>OAuth</span>
+        </div>
+    </div>
+
+    <div id="software" class="tabcontent">
+        <div class="bubbles">
+            <span>Visual Studio</span>
+            <span>VS Code</span>
+            <span>GitHub</span>
+            <span>Azure DevOps</span>
+            <span>Postman</span>
+            <span>Sonar Lint</span>
+            <span>Jira</span>
+            <span>SQL Server Management Studio</span>
+        </div>
+    </div>
+</section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <h3>Beesolver Technologies | Mohali, Punjab, India</h3>
+            <p><strong>Senior Software Engineer</strong> (May 2021 – Current)</p>
+            <p>At Beesolver Technologies, I led a cross-functional team to improve system reliability and data integrity, successfully reducing date-related errors by 90% and data violations by 90% within a few months. My role involved enhancing the accuracy of client applications, analyzing and debugging codes, and fostering collaboration through Test-Driven Development for each production release.</p>
+
+            <h3>Sensation Software Solutions | Mohali, Punjab, India</h3>
+            <p><strong>Software Engineer</strong> (January 2018 – May 2021)</p>
+            <p>During my tenure at Sensation Software Solutions, I collaborated with developers and QA teams to significantly enhance application quality and speed, integrating multiple third-party APIs and a customized third-party login system for improved security. I also enforced coding standards, optimized stored procedures, and designed a customized website for efficient employee management and task tracking, leading to an 80% improvement in website performance.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Punjab Technical University</strong> (August 2014 – June 2018)<br>Bachelor of Technology in Computer Science</p>
+            <h2>Relevant Coursework</h2>
+            <ul>
+                <li>HackerRank: Angular, C#, SQL, Problem Solving</li>
+                <li>IBM: Artificial Intelligence fundamentals</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Kharar, Punjab, India</p>
+            <p>Phone: +91-8528xxxx75</p>
+            <p>Email: email@gmail.com</p>
+            <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Rahul Sharma &copy; 2024</p>
+    </footer>
+</body>
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</html>
